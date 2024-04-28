@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
+import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_outlined_button.dart';
 import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
 
+import '../../presentation/three_screen/three_screen.dart';
 // ignore_for_file: must_be_immutable
 class TwoScreen extends StatelessWidget {
   TwoScreen({Key? key})
@@ -56,7 +58,7 @@ class TwoScreen extends StatelessWidget {
                       //SizedBox(height: 30.0),
                       Container(
                         width: 209.h,
-                        height: 60.v,
+                        height: 80.v,
                         margin: EdgeInsets.only(left: 1.h),
                         child: RichText(
                           text: TextSpan(
@@ -88,7 +90,7 @@ class TwoScreen extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
                             style: theme.textTheme.titleMedium!.copyWith(
-                              decoration: TextDecoration.underline,
+
                             ),
 
                           ),
@@ -107,7 +109,7 @@ class TwoScreen extends StatelessWidget {
                         padding: EdgeInsets.only(left: 1.h),
                         child: CustomTextFormField(
                           controller: nameController,
-                          hintText: "Lorem ipsum",
+                          hintText: "Your name",
                         ),
                       ),
                       SizedBox(height: 11.v),
@@ -134,7 +136,17 @@ class TwoScreen extends StatelessWidget {
                       CustomOutlinedButton(
                         width: 215.h,
                         text: "Sign Up",
+                        buttonStyle: CustomButtonStyles.outlineBlueGray,
                         alignment: Alignment.center,
+
+
+                        onPressed: () {
+                          // Navigate to the ThreeScreen
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ThreeScreen()),
+                          );
+                        },
                       ),
                       SizedBox(height: 10.v),
                       Align(
@@ -147,7 +159,7 @@ class TwoScreen extends StatelessWidget {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: "have an account? ",
+                                  text: "Have an account? ",
                                   style: theme.textTheme.bodyMedium,
                                 ),
                                 TextSpan(
@@ -162,7 +174,7 @@ class TwoScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 28.v),
+                      SizedBox(height: 90.v),
                       Align(
                         alignment: Alignment.center,
                         child: Container(

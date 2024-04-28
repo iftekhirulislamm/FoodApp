@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
+import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_outlined_button.dart';
 import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
-
+import '../../presentation/three_screen/three_screen.dart';
 // ignore_for_file: must_be_immutable
 class ThreeScreen extends StatelessWidget {
   ThreeScreen({Key? key})
@@ -51,9 +52,10 @@ class ThreeScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(height: 61.v),
+                      //SizedBox(height: 61.v),
                       SizedBox(
                         width: 146.h,
+                        height: 15.v,
                         child: Text(
                           "USER REGISTERED\n ",
                           maxLines: null,
@@ -64,7 +66,7 @@ class ThreeScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 36.v),
+                      SizedBox(height: 20.v),
                       SizedBox(
                         width: 191.h,
                         child: Text(
@@ -73,7 +75,7 @@ class ThreeScreen extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
                           style: theme.textTheme.titleMedium!.copyWith(
-                            decoration: TextDecoration.underline,
+                            //decoration: TextDecoration.underline,
                           ),
                         ),
                       ),
@@ -91,7 +93,7 @@ class ThreeScreen extends StatelessWidget {
                       SizedBox(height: 8.v),
                       CustomTextFormField(
                         controller: nameController,
-                        hintText: "Lorem ipsum",
+                        hintText: "Your name",
                       ),
                       SizedBox(height: 11.v),
                       _buildEmailSection(context),
@@ -117,6 +119,14 @@ class ThreeScreen extends StatelessWidget {
                       CustomOutlinedButton(
                         width: 215.h,
                         text: "Sign Up",
+                        buttonStyle: CustomButtonStyles.outlineBlueGray,
+                        onPressed: () {
+                          // Navigate to the ThreeScreen
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ThreeScreen()),
+                          );
+                        },
                       ),
                       SizedBox(height: 10.v),
                       GestureDetector(
@@ -127,7 +137,7 @@ class ThreeScreen extends StatelessWidget {
                           text: TextSpan(
                             children: [
                               TextSpan(
-                                text: "have an account? ",
+                                text: "Have an account? ",
                                 style: theme.textTheme.bodyMedium,
                               ),
                               TextSpan(

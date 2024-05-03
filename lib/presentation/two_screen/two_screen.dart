@@ -3,7 +3,6 @@ import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_outlined_button.dart';
 import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
-
 import '../../presentation/three_screen/three_screen.dart';
 // ignore_for_file: must_be_immutable
 class TwoScreen extends StatelessWidget {
@@ -52,10 +51,9 @@ class TwoScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 59.h),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      //SizedBox(height: 33.v),
-                      //SizedBox(height: 30.0),
+
                       Container(
                         width: 209.h,
                         height: 80.v,

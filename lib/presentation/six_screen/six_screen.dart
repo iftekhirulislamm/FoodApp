@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_icon_button.dart';
-
+import '../one_screen/one_screen.dart';
 class SixScreen extends StatelessWidget {
   const SixScreen({Key? key})
       : super(
@@ -30,12 +30,13 @@ class SixScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Spacer(),
+                //Spacer(),
+                SizedBox(height: 110.v),
                 Text(
                   "User Profile",
                   style: theme.textTheme.headlineSmall,
                 ),
-                SizedBox(height: 43.v),
+                SizedBox(height: 40.v),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 124.h),
                   padding: EdgeInsets.all(7.h),
@@ -53,12 +54,12 @@ class SixScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 37.v),
+                SizedBox(height: 41.v),
                 Text(
                   "Shumsul Arefin",
                   style: CustomTextStyles.headlineSmallBold,
                 ),
-                SizedBox(height: 53.v),
+                SizedBox(height: 60.v),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 45.h),
                   padding: EdgeInsets.symmetric(vertical: 11.v),
@@ -71,7 +72,7 @@ class SixScreen extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(
                           left: 22.h,
-                          right: 14.h,
+                          right: 41.h,
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -144,32 +145,42 @@ class SixScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 78.v),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 66.h),
-                    child: Row(
-                      children: [
-                        CustomImageView(
-                          imagePath: ImageConstant.imgThumbsUp,
-                          height: 24.adaptSize,
-                          width: 24.adaptSize,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 5.h),
-                          child: Text(
-                            "Log Out",
-                            style: CustomTextStyles.bodyMedium15.copyWith(
-                              decoration: TextDecoration.underline,
-                            ),
+                SizedBox(height: 70.v),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OneScreen(),
+                      ),
+                    );
+                  },
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 66.h),
+                      child: Row(
+                        children: [
+                          CustomImageView(
+                            imagePath: ImageConstant.imgThumbsUp,
+                            height: 24.adaptSize,
+                            width: 24.adaptSize,
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(left: 5.h),
+                            child: Text(
+                              "Log Out",
+                              style: CustomTextStyles.bodyMedium15.copyWith(
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                SizedBox(height: 53.v),
+                SizedBox(height: 95.7.v),
                 _buildColumnfimessage(context)
               ],
             ),
@@ -184,7 +195,7 @@ class SixScreen extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 90.h,
-        vertical: 24.v,
+        vertical: 10.v,
       ),
       decoration: AppDecoration.gradientPrimaryContainerToPink,
       child: Column(

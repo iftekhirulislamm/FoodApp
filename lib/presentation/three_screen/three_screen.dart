@@ -51,8 +51,9 @@ class ThreeScreen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 59.h),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
+
                     children: [
-                      //SizedBox(height: 61.v),
+
                       SizedBox(
                         width: 146.h,
                         height: 15.v,
@@ -62,11 +63,11 @@ class ThreeScreen extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
                           style: theme.textTheme.titleMedium!.copyWith(
-                            decoration: TextDecoration.underline,
+                            //decoration: TextDecoration.underline,
                           ),
                         ),
                       ),
-                      SizedBox(height: 20.v),
+                      SizedBox(height: 45.v),
                       SizedBox(
                         width: 191.h,
                         child: Text(
@@ -151,7 +152,7 @@ class ThreeScreen extends StatelessWidget {
                           textAlign: TextAlign.left,
                         ),
                       ),
-                      SizedBox(height: 28.v),
+                      SizedBox(height: 90.v),
                       Container(
                         width: 290.h,
                         margin: EdgeInsets.symmetric(horizontal: 10.h),

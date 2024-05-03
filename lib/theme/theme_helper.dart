@@ -162,5 +162,5 @@ class LightCodeColors {
   Color get red10001 => Color(0XFFF2CED4);
   Color get red10002 => Color(0XFFFFD8DF);
 // WhiteAf
-  Color get whiteA7007f => Color(0X7FFFFEFE);
+  Color get whiteA7007f => Color(0XFFD5D5D5);
 }

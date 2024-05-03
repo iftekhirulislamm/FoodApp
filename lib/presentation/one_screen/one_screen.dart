@@ -2,19 +2,13 @@ import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_outlined_button.dart';
-import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
-
-// ignore_for_file: must_be_immutable
+import '../../widgets/custom_text_form_field.dart';
+import '../six_screen/six_screen.dart';
 class OneScreen extends StatelessWidget {
-  OneScreen({Key? key})
-      : super(
-          key: key,
-        );
+  OneScreen({Key? key}) : super(key: key);
 
   TextEditingController emailController = TextEditingController();
-
   TextEditingController passwordController = TextEditingController();
-
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
@@ -55,43 +49,6 @@ class OneScreen extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        //this commented part was originated by dhiwise
-                        //Spacer(),
-                        // Align(
-                        //   alignment: Alignment.centerLeft,
-                        //   child: Container(
-                        //     width: 223.h,
-                        //     margin: EdgeInsets.only(
-                        //       left: 2.h,
-                        //       right: 86.h,
-                        //     ),
-                        //     child: Text(
-                        //       "Welcome to \n ",
-                        //       maxLines: null,
-                        //      overflow: TextOverflow.ellipsis,
-                        //       style: theme.textTheme.headlineLarge,
-                        //     ),
-                        //   ),
-                        // ),
-                        // SizedBox(height: 1.0),
-                        // Align(
-                        //   alignment: Alignment.centerLeft,
-                        //   child: Container(
-                        //     width: 272.h,
-                        //     margin: EdgeInsets.only(
-                        //       left: 2.h,
-                        //       right: 37.h,
-                        //     ),
-                        //     child: Text(
-                        //       "Health Nourish App\n ",
-                        //       maxLines: null,
-                        //       overflow: TextOverflow.ellipsis,
-                        //       style: theme.textTheme.headlineMedium,
-                        //     ),
-                        //   ),
-                        // ),
-
-
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Container(
@@ -102,14 +59,14 @@ class OneScreen extends StatelessWidget {
                                   TextSpan(
                                     text: "Welcome to\n",
                                     style: theme.textTheme.headlineLarge?.copyWith(
-                                      fontWeight: FontWeight.bold, // Set the font weight to bold
+                                      fontWeight: FontWeight.bold,
                                       fontSize: 26.0,
                                     ),
                                   ),
                                   TextSpan(
                                     text: "Health Nourish App",
                                     style: theme.textTheme.headlineLarge?.copyWith(
-                                      fontWeight: FontWeight.w600, // Set the font weight to semi-bold (600)
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 20.0,
                                     ),
                                   ),
@@ -118,7 +75,6 @@ class OneScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-
                         SizedBox(height: 49.v),
                         SizedBox(
                           width: 197.h,
@@ -127,9 +83,7 @@ class OneScreen extends StatelessWidget {
                             maxLines: null,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
-                            style: theme.textTheme.titleMedium!.copyWith(
-
-                            ),
+                            style: theme.textTheme.titleMedium!.copyWith(),
                           ),
                         ),
                         SizedBox(height: 16.v),
@@ -142,6 +96,9 @@ class OneScreen extends StatelessWidget {
                           width: 215.h,
                           text: "Sign In",
                           buttonStyle: CustomButtonStyles.outlineBlueGray,
+                          onPressed: () {
+                            Navigator.pushNamed(context, AppRoutes.sixScreen);
+                          },
                         ),
                         SizedBox(height: 11.v),
                         GestureDetector(
@@ -153,9 +110,7 @@ class OneScreen extends StatelessWidget {
                               children: [
                                 TextSpan(
                                   text: "Don't have an account? ",
-                                  style: theme.textTheme.bodyMedium!.copyWith(
-
-                                  ),
+                                  style: theme.textTheme.bodyMedium!.copyWith(),
                                 ),
                                 TextSpan(
                                   text: "Sign Up Now",
@@ -192,7 +147,6 @@ class OneScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildEmailSection(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 1.h),
@@ -221,7 +175,6 @@ class OneScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildPasswordSection(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 1.h),
@@ -259,9 +212,7 @@ class OneScreen extends StatelessWidget {
     );
   }
 
-  /// Navigates to the twoScreen when the action is triggered.
   onTapTxtDonthaveanaccountsign(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.twoScreen);
   }
-
 }

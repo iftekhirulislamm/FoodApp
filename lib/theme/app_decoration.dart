@@ -14,41 +14,42 @@ class AppDecoration {
       );
 // Gradient decorations
   static BoxDecoration get gradientPrimaryContainerToPink => BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment(0.5, -0.37),
-          end: Alignment(0.5, 1),
-          colors: [
-            theme.colorScheme.primaryContainer,
-            appTheme.pink100,
-            appTheme.pink5001
-          ],
-        ),
-      );
+    gradient: LinearGradient(
+      begin: Alignment(1, -4),
+      end: Alignment(1, 1),
+      colors: [
+        Colors.transparent, // Transparent
+        appTheme.pink5001.withOpacity(0.5), // Pink shade with 50% opacity
+        appTheme.pink5001.withOpacity(1), // Pink shade (same as previous color)
+      ],
+    ),
+  );
+
 // Outline decorations
   static BoxDecoration get outlinePrimary => BoxDecoration(
-        color: theme.colorScheme.onError.withOpacity(0.35),
-        boxShadow: [
-          BoxShadow(
-            color: theme.colorScheme.primary,
-            spreadRadius: 2.h,
-            blurRadius: 2.h,
-            offset: Offset(
-              0,
-              2,
-            ),
-          )
-        ],
+        color: theme.colorScheme.onError.withOpacity(.5),
+        // boxShadow: [
+        //   // BoxShadow(
+        //   //   color: theme.colorScheme.primary,
+        //   //   spreadRadius: 5.h,
+        //   //   blurRadius: 2.h,
+        //   //   offset: Offset(
+        //   //     0,
+        //   //     2,
+        //   //   ),
+        //   )
+        // ],
       );
   static BoxDecoration get outlinePrimary1 => BoxDecoration(
-        color: appTheme.whiteA7007f,
+        color: appTheme.pink50.withOpacity(.9),
         boxShadow: [
           BoxShadow(
             color: theme.colorScheme.primary,
-            spreadRadius: 2.h,
-            blurRadius: 2.h,
+            spreadRadius: 1.h,
+            blurRadius: 1.h,
             offset: Offset(
               0,
-              2,
+              1,
             ),
           )
         ],

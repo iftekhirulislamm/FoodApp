@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../core/app_export.dart';
 import '../../widgets/custom_icon_button.dart';
 import '../one_screen/one_screen.dart';
+import '../four_screen/four_screen.dart';
 class SixScreen extends StatelessWidget {
   const SixScreen({Key? key})
       : super(
@@ -215,16 +216,27 @@ class SixScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.min,
               children: [
-                CustomImageView(
-                  imagePath: ImageConstant.imgFiMessageSquare,
-                  height: 24.adaptSize,
-                  width: 24.adaptSize,
-                  margin: EdgeInsets.only(
-                    left: 16.h,
-                    top: 17.v,
-                    bottom: 16.v,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FourScreen(),
+                      ),
+                    );
+                  },
+                  child: CustomImageView(
+                    imagePath: ImageConstant.imgFiMessageSquareBlack900,
+                    height: 24.adaptSize,
+                    width: 24.adaptSize,
+                    margin: EdgeInsets.only(
+                      left: 16.h,
+                      top: 17.v,
+                      bottom: 16.v,
+                    ),
                   ),
                 ),
+
                 Spacer(
                   flex: 59,
                 ),
@@ -245,7 +257,7 @@ class SixScreen extends StatelessWidget {
                   width: 57.adaptSize,
                   padding: EdgeInsets.all(16.h),
                   child: CustomImageView(
-                    imagePath: ImageConstant.imgFiGitlab,
+                    imagePath: ImageConstant.imgFiGitlabBlack900,
                   ),
                 )
               ],

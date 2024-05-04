@@ -192,12 +192,6 @@ class OneScreen extends StatelessWidget {
                     style: theme.textTheme.bodyMedium,
                   ),
                 ),
-                Text(
-                  "Forgot Password?",
-                  style: theme.textTheme.bodyMedium!.copyWith(
-                    decoration: TextDecoration.underline,
-                  ),
-                )
               ],
             ),
           ),
@@ -206,9 +200,21 @@ class OneScreen extends StatelessWidget {
             controller: passwordController,
             textInputAction: TextInputAction.done,
             obscureText: true,
-          )
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end, // Align "Forgot Password?" to the left
+            children: [
+              Text(
+                "Forgot Password?",
+                style: theme.textTheme.bodyMedium!.copyWith(
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
+
     );
   }
 

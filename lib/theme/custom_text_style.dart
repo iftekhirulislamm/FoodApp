@@ -28,4 +28,24 @@ class CustomTextStyles {
   static get headlineSmallBold => theme.textTheme.headlineSmall!.copyWith(
         fontWeight: FontWeight.w700,
       );
+
+
+  //from wizzy
+  static get bodySmall12 => theme.textTheme.bodySmall!.copyWith(
+    fontSize: 12.fSize,
+  );
+  static get bodySmall_1 => theme.textTheme.bodySmall!;
+// Headline text style
+
+  static get headlineSmallMedium => theme.textTheme.headlineSmall!.copyWith(
+    fontWeight: FontWeight.w500,
+  );
+  static get headlineSmallSemiBold => theme.textTheme.headlineSmall!.copyWith(
+    fontWeight: FontWeight.w600,
+  );
+// Title text style
+//   static get titleSmallLightblueA400 => theme.textTheme.titleSmall!.copyWith(
+//     color: appTheme.lightBlueA400,
+//     fontSize: 14.fSize,
+//   );
 }

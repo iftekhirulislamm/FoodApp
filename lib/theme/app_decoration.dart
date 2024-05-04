@@ -40,6 +40,21 @@ class AppDecoration {
         //   )
         // ],
       );
+  static BoxDecoration get outlineBlack => BoxDecoration(
+    color: appTheme.red50,
+    boxShadow: [
+      BoxShadow(
+        color: appTheme.black900.withOpacity(0.25),
+        spreadRadius: 2.h,
+        blurRadius: 2.h,
+        offset: Offset(
+          0,
+          2,
+        ),
+      )
+    ],
+  );
+
   static BoxDecoration get outlinePrimary1 => BoxDecoration(
         color: appTheme.pink50.withOpacity(.9),
         boxShadow: [
@@ -68,4 +83,14 @@ class BorderRadiusStyle {
   static BorderRadius get roundedBorder39 => BorderRadius.circular(
         39.h,
       );
+  //wizzy
+
+
+// Rounded borders
+
+  static BorderRadius get roundedBorder9 => BorderRadius.circular(
+    9.h,
+  );
+
+
 }

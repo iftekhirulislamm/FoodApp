@@ -58,7 +58,7 @@ class SixScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 41.v),
                 Text(
-                  "Shumsul Arefin",
+                  "Tarif Shahriar Arnob",
                   style: CustomTextStyles.headlineSmallBold,
                 ),
                 SizedBox(height: 60.v),

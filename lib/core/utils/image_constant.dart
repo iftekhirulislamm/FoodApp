@@ -2,7 +2,8 @@
 class ImageConstant {
   // Image folder path
   static String imagePath = 'assets/images';
-
+//five image
+  static String imgFiBookmarkBlack900 = '$imagePath/img_fi_bookmark_black_900.svg';
 // Six images
   static String imgThumbsUp = '$imagePath/img_thumbs_up.svg';
 

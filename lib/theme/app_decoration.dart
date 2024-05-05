@@ -24,7 +24,13 @@ class AppDecoration {
       ],
     ),
   );
-
+  static BoxDecoration get gradientBlackToPink => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(0.5, -0.37),
+      end: Alignment(0.5, 1),
+      colors: [appTheme.black900, appTheme.pink100, appTheme.pink50],
+    ),
+  );
 // Outline decorations
   static BoxDecoration get outlinePrimary => BoxDecoration(
         color: theme.colorScheme.onError.withOpacity(.5),
@@ -40,6 +46,34 @@ class AppDecoration {
         //   )
         // ],
       );
+  static BoxDecoration get outlineBlack9001 => BoxDecoration(
+    color: appTheme.pink507f,
+    boxShadow: [
+      BoxShadow(
+        color: appTheme.black900.withOpacity(0.25),
+        spreadRadius: 2.h,
+        blurRadius: 2.h,
+        offset: Offset(
+          0,
+          2,
+        ),
+      )
+    ],
+  );
+  static BoxDecoration get outlineBlack900 => BoxDecoration(
+    color: appTheme.whiteA7007f,
+    boxShadow: [
+      BoxShadow(
+        color: appTheme.black900.withOpacity(0.25),
+        spreadRadius: 2.h,
+        blurRadius: 2.h,
+        offset: Offset(
+          0,
+          2,
+        ),
+      )
+    ],
+  );
   static BoxDecoration get outlineBlack => BoxDecoration(
     color: appTheme.red50,
     boxShadow: [

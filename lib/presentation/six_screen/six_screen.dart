@@ -3,6 +3,7 @@ import '../../core/app_export.dart';
 import '../../widgets/custom_icon_button.dart';
 import '../one_screen/one_screen.dart';
 import '../four_screen/four_screen.dart';
+import '../five_screen/five_screen.dart';
 class SixScreen extends StatelessWidget {
   const SixScreen({Key? key})
       : super(
@@ -240,7 +241,16 @@ class SixScreen extends StatelessWidget {
                 Spacer(
                   flex: 59,
                 ),
-                CustomImageView(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FiveScreen(),
+                        ),
+                      );
+                    },
+                child: CustomImageView(
                   imagePath: ImageConstant.imgFiBookmark,
                   height: 24.adaptSize,
                   width: 24.adaptSize,
@@ -249,6 +259,7 @@ class SixScreen extends StatelessWidget {
                     bottom: 16.v,
                   ),
                 ),
+                  ),
                 Spacer(
                   flex: 40,
                 ),

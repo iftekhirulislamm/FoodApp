@@ -43,6 +43,10 @@ class CustomTextStyles {
   static get headlineSmallSemiBold => theme.textTheme.headlineSmall!.copyWith(
     fontWeight: FontWeight.w600,
   );
+  static get titleSmallLightblueA400 => theme.textTheme.titleSmall!.copyWith(
+    color: appTheme.lightBlueA400,
+    fontSize: 14.fSize,
+  );
 // Title text style
 //   static get titleSmallLightblueA400 => theme.textTheme.titleSmall!.copyWith(
 //     color: appTheme.lightBlueA400,

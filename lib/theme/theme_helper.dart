@@ -157,6 +157,7 @@ class LightCodeColors {
   Color get pink100 => Color(0XFFE6C4C9);
   Color get pink50 => Color(0XFFFFE6EA);
   Color get pink5001 => Color(0XFFFFD9DF);
+  Color get pink507f => Color(0X7FFEE5E9);
 // Red
   Color get red100 => Color(0XFFFBD5DB);
   Color get red10001 => Color(0XFFF2CED4);
@@ -164,6 +165,8 @@ class LightCodeColors {
   Color get red50 => Color(0XFFFFECEF);
 // WhiteAf
   Color get whiteA7007f => Color(0XFFD5D5D5);
+  // LightBlue
+  Color get lightBlueA400 => Color(0XFF00B6FF);
   //black
   Color get black900 => Color(0XFF000000);
 }

@@ -59,9 +59,9 @@ Resolve the errors and warnings that are shown in the application.
 If you have any problems or questions, go to our Discord channel, where we will help you as quickly as possible: https://discord.com/invite/rFMnCG5MZ7
 
 
-<p> screen one- sign in page
-screen two- sign up page
-screen three- user registered page
-screen six- user profile
-screen four- chat with health assistant
-screen five- saved diet chart</p>git 
+<p> screen one- sign in page <br>
+screen two- sign up page<br>
+screen three- user registered page<br>
+screen six- user profile<br>
+screen four- chat with health assistant<br>
+screen five- saved diet chart</p>

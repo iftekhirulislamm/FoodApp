@@ -1,141 +1,216 @@
 // import 'package:flutter/material.dart';
 // import '../../core/app_export.dart';
 // import '../../widgets/custom_icon_button.dart';
-// import '../../widgets/custom_text_form_field.dart';
-// import '../six_screen/six_screen.dart';
+// import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
+// import '../four_screen/four_screen.dart';
+// import '../five_screen/five_screen.dart';
+// // ignore_for_file: must_be_immutable
+// class SevenScreen extends StatelessWidget {
+//   SevenScreen({Key? key})
+//       : super(
+//     key: key,
+//   );
 //
-// class FourScreen extends StatefulWidget {
-//   FourScreen({Key? key}) : super(key: key);
-//
-//   @override
-//   _FourScreenState createState() => _FourScreenState();
-// }
-//
-// class _FourScreenState extends State<FourScreen> {
 //   TextEditingController messageController = TextEditingController();
-//   List<String> messages = [];
-//
-//   @override
-//   void initState() {
-//     super.initState();
-//     // Add the fixed message to the messages list when the screen is opened
-//     messages.add("I'd be glad to help you create a muscle-building diet plan for seven days! In order to make sure each meal provides the necessary nutrients, I've designed three meals per day which are slightly diff erent, however, they all contain a good balance of protein, complex carbohydrates, healthy fats, and essential vitamins and minerals. Please note that each meal should be paired with adequate portio of fruits, vegetables, and whole grains to ensure a well-balanced diet.");
-//   }
-//
-//   void sendMessage(BuildContext context) {
-//     String message = messageController.text;
-//     if (message.isNotEmpty) {
-//       setState(() {
-//         messages.add(message);
-//         messageController.clear();
-//       });
-//     }
-//   }
 //
 //   @override
 //   Widget build(BuildContext context) {
 //     return SafeArea(
 //       child: Scaffold(
-//         extendBody: true,
-//         extendBodyBehindAppBar: true,
 //         resizeToAvoidBottomInset: false,
-//         body: Container(
-//           width: SizeUtils.width,
-//           height: SizeUtils.height,
-//           decoration: BoxDecoration(
-//             color: appTheme.pink5001,
-//             image: DecorationImage(
-//               image: AssetImage(ImageConstant.imgFour),
-//               fit: BoxFit.cover,
-//             ),
-//           ),
-//           child: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: [
-//               SizedBox(height: 50.v),
-//               Align(
-//                 alignment: Alignment.centerLeft,
-//                 child: Container(
-//                   width: 137.h,
-//                   height: 40.v,
-//                   margin: EdgeInsets.only(left: 53.h),
-//                   child: Text(
-//                     "Chat with our\n ",
-//                     maxLines: null,
-//                     overflow: TextOverflow.ellipsis,
-//                     style: theme.textTheme.titleLarge,
-//                   ),
-//                 ),
-//               ),
-//               SizedBox(height: 2.v),
-//               Container(
-//                 width: 319.h,
-//                 height: 50.v,
-//                 margin: EdgeInsets.only(left: 52.h, right: 58.h),
-//                 child: RichText(
-//                   text: TextSpan(
-//                     children: [
-//                       TextSpan(
-//                         text: "AI Based Health Assistant\n",
-//                         style: theme.textTheme.headlineSmall,
-//                       ),
-//                       TextSpan(
-//                         text: " ",
-//                         style: CustomTextStyles.headlineSmallSemiBold,
-//                       )
-//                     ],
-//                   ),
-//                   textAlign: TextAlign.left,
-//                 ),
-//               ),
-//               SizedBox(height: 21.v),
-//               Expanded(
-//                 child: ListView.builder(
-//                   itemCount: messages.length,
-//                   itemBuilder: (context, index) {
-//                     final message = messages[index];
-//                     // Set isUserMessage to false for the welcome message
-//                     bool isUserMessage = index != 0;
-//                     return MessageBubble(
-//                       message: message,
-//                       isUserMessage: isUserMessage,
-//                     );
-//                   },
-//                 ),
-//               ),
-//               SizedBox(height: 39.v),
-//               Padding(
-//                 padding: EdgeInsets.symmetric(horizontal: 31.h),
-//                 child: CustomTextFormField(
-//                   controller: messageController,
-//                   hintText: "type your message",
-//                   textInputAction: TextInputAction.done,
-//                   suffix: GestureDetector(
-//                     onTap: () {
-//                       sendMessage(context);
-//                     },
+//         body: SizedBox(
+//           width: double.maxFinite,
+//
+//           child: Container(
+//             child: SizedBox(
+//               height: SizeUtils.height,
+//               width: double.maxFinite,
+//               child: Stack(
+//                 alignment: Alignment.center,
+//                 children: [
+//                   Align(
+//                     alignment: Alignment.topCenter,
 //                     child: Container(
-//                       margin: EdgeInsets.fromLTRB(12.h, 7.v, 28.h, 7.v),
-//                       child: CustomImageView(
-//                         imagePath: ImageConstant.imgSave,
-//                         height: 25.adaptSize,
-//                         width: 25.adaptSize,
+//                       decoration: BoxDecoration(
+//                         image: DecorationImage(
+//                           image: AssetImage(
+//                             ImageConstant.imgFour,
+//                           ),
+//                           fit: BoxFit.cover,
+//                         ),
+//                       ),
+//                       child: Column(
+//                         children :[
+//                           Container(
+//                             padding: EdgeInsets.symmetric(
+//                               horizontal: 34.h,
+//                               vertical: 41.5.v,
+//                             ),
+//                             child: Column(
+//                               mainAxisSize: MainAxisSize.max,
+//                               children: [
+//                                 Align(
+//                                   alignment: Alignment.centerRight,
+//                                   child: Padding(
+//                                     padding: EdgeInsets.only(right: 12.h),
+//                                     child: Row(
+//                                       mainAxisAlignment: MainAxisAlignment.end,
+//                                       children: [
+//                                         CustomImageView(
+//                                           imagePath: ImageConstant.imgClock,
+//                                           height: 24.adaptSize,
+//                                           width: 24.adaptSize,
+//                                         ),
+//                                         CustomImageView(
+//                                           imagePath: ImageConstant.imgFiBookmark,
+//                                           height: 24.adaptSize,
+//                                           width: 24.adaptSize,
+//                                           margin: EdgeInsets.only(left: 9.h),
+//                                         )
+//                                       ],
+//                                     ),
+//                                   ),
+//                                 ),
+//                                 Text(
+//                                   "Day 01",
+//                                   style: CustomTextStyles.titleSmallLightblueA400,
+//                                 ),// day 1 headline
+//                                 SizedBox(height: 2.v),
+//                                 _buildColumnlinefive(context),
+//                                 SizedBox(height: 13.v),
+//                                 Text(
+//                                   "Day 02",
+//                                   style: CustomTextStyles.titleSmallLightblueA400,
+//                                 ),// day 2 headline
+//                                 SizedBox(height: 2.v),
+//                                 _buildColumnlinefive(context),
+//                                 SizedBox(height: 13.v),
+//                                 Text(
+//                                   "Day 03",
+//                                   style: CustomTextStyles.titleSmallLightblueA400,
+//                                 ),//day 3 headline
+//                                 SizedBox(height: 2.v),
+//                                 _buildColumnlinefive(context),
+//
+//                               ],
+//                             ),
+//
+//                           ),
+//                           Container(
+//                               child: Align(
+//                                 alignment: Alignment.bottomCenter,
+//                                 child: _buildColumnfimessage( context),
+//                               )
+//
+//                           )
+//                         ],
 //                       ),
 //                     ),
+//
+//
 //                   ),
-//                   suffixConstraints: BoxConstraints(maxHeight: 49.v),
-//                 ),
+//
+//                 ],
 //               ),
-//               //SizedBox(height: 20.v),
-//               _buildColumnFiMessage(context),
-//             ],
+//             ),
 //           ),
 //         ),
 //       ),
 //     );
 //   }
 //
-//   Widget _buildColumnFiMessage(BuildContext context) {
+//   /// Section Widget
+//   Widget _buildColumnlinefive(BuildContext context) {
+//     return Container(
+//       margin: EdgeInsets.only(left: 1.h),
+//       padding: EdgeInsets.symmetric(vertical: 8.v),
+//       decoration: AppDecoration.outlineBlack9001.copyWith(
+//         borderRadius: BorderRadiusStyle.roundedBorder9,
+//       ),
+//       child: Column(
+//         mainAxisSize: MainAxisSize.min,
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           SizedBox(height: 4.v),
+//           Padding(
+//             padding: EdgeInsets.symmetric(horizontal: 20.h),
+//             child: _buildRowspacerThree(
+//               context,
+//               mealText: "Meal 01",
+//               weightText: "Weight",
+//               nutritionalText: "Nutritional Values ",
+//             ),
+//           ),//meal 1 headline
+//           SizedBox(height: 2.v),
+//           Padding(
+//             padding: EdgeInsets.only(
+//               left: 20.h,
+//               right: 67.h,
+//             ),
+//             child: _buildRowturkeyburger(
+//               context,
+//               menuText1: "Salmon  \nBrown Rice\nSliced Almonds",
+//               menuText2: "150g\n200g\n30g",
+//               menuText3: "Protein: 34g\nCarbs: 33g\nFat: 12g\r",
+//             ),
+//           ),//meal 1 details
+//           SizedBox(height: 2.v),
+//           Divider(),
+//           SizedBox(height: 2.v),
+//           Padding(
+//             padding: EdgeInsets.symmetric(horizontal: 20.h),
+//             child: _buildRowspacerThree(
+//               context,
+//               mealText: "Meal 02",
+//               weightText: "Weight",
+//               nutritionalText: "Nutritional Values ",
+//             ),
+//           ), //meal 2 headline
+//           SizedBox(height: 2.v),
+//           Padding(
+//             padding: EdgeInsets.only(
+//               left: 20.h,
+//               right: 67.h,
+//             ),
+//             child: _buildRowturkeyburger(
+//               context,
+//               menuText1: "Salmon  \nBrown Rice\nSliced Almonds",
+//               menuText2: "150g\n200g\n30g",
+//               menuText3: "Protein: 34g\nCarbs: 33g\nFat: 12g\r",
+//             ),
+//           ), //meal 2 details
+//           SizedBox(height: 2.v),
+//           Divider(),
+//           SizedBox(height: 2.v),
+//           Padding(
+//             padding: EdgeInsets.symmetric(horizontal: 20.h),
+//             child: _buildRowspacerThree(
+//               context,
+//               mealText: "Meal 03",
+//               weightText: "Weight",
+//               nutritionalText: "Nutritional Values ",
+//             ),
+//           ),//meal 3 headline
+//           SizedBox(height: 2.v),
+//           Padding(
+//             padding: EdgeInsets.only(
+//               left: 20.h,
+//               right: 67.h,
+//             ),
+//             child: _buildRowturkeyburger(
+//               context,
+//               menuText1: "Turkey Burger \nSweet Potato\nGreen Beans",
+//               menuText2: "150g\n200g\n150g",
+//               menuText3: "Protein: 34g\nCarbs: 51g\nFat: 8g\r",
+//             ),
+//           )//meal 3 details
+//         ],
+//       ),//column for meal headline and details
+//     );
+//   } //full day diet
+//
+//   /// Section Widget
+//   Widget _buildColumnfimessage(BuildContext context) {
 //     return Container(
 //       padding: EdgeInsets.symmetric(
 //         horizontal: 90.h,
@@ -159,26 +234,27 @@
 //               mainAxisAlignment: MainAxisAlignment.end,
 //               mainAxisSize: MainAxisSize.min,
 //               children: [
-//                 CustomIconButton(
-//                   height: 57.adaptSize,
-//                   width: 57.adaptSize,
-//                   padding: EdgeInsets.all(16.h),
+//                 GestureDetector(
+//                   onTap: () {
+//                     Navigator.push(
+//                       context,
+//                       MaterialPageRoute(
+//                         builder: (context) => FourScreen(),
+//                       ),
+//                     );
+//                   },
 //                   child: CustomImageView(
-//                     imagePath: ImageConstant.imgFiMessageSquare,
+//                     imagePath: ImageConstant.imgFiMessageSquareBlack900,
+//                     height: 24.adaptSize,
+//                     width: 24.adaptSize,
+//                     margin: EdgeInsets.only(
+//                       left: 16.h,
+//                       top: 17.v,
+//                       bottom: 16.v,
+//                     ),
 //                   ),
 //                 ),
-//                 Spacer(
-//                   flex: 40,
-//                 ),
-//                 CustomImageView(
-//                   imagePath: ImageConstant.imgFiBookmark,
-//                   height: 24.adaptSize,
-//                   width: 24.adaptSize,
-//                   margin: EdgeInsets.only(
-//                     top: 17.v,
-//                     bottom: 16.v,
-//                   ),
-//                 ),
+//
 //                 Spacer(
 //                   flex: 59,
 //                 ),
@@ -187,58 +263,123 @@
 //                     Navigator.push(
 //                       context,
 //                       MaterialPageRoute(
-//                         builder: (context) => SixScreen(),
+//                         builder: (context) => FiveScreen(),
 //                       ),
 //                     );
 //                   },
 //                   child: CustomImageView(
-//                     imagePath: ImageConstant.imgFiGitlab,
+//                     imagePath: ImageConstant.imgFiBookmark,
 //                     height: 24.adaptSize,
 //                     width: 24.adaptSize,
 //                     margin: EdgeInsets.only(
 //                       top: 17.v,
-//                       right: 16.h,
 //                       bottom: 16.v,
 //                     ),
 //                   ),
 //                 ),
+//                 Spacer(
+//                   flex: 40,
+//                 ),
+//                 CustomIconButton(
+//                   height: 57.adaptSize,
+//                   width: 57.adaptSize,
+//                   padding: EdgeInsets.all(16.h),
+//                   child: CustomImageView(
+//                     imagePath: ImageConstant.imgFiGitlabBlack900,
+//                   ),
+//                 )
 //               ],
 //             ),
 //           )
 //         ],
 //       ),
 //     );
+//   } // footer navigating route
+//   /// Common widget
+//   Widget _buildRowspacerThree(
+//       BuildContext context, {
+//         required String mealText,
+//         required String weightText,
+//         required String nutritionalText,
+//       }) {
+//     return Row(
+//       mainAxisAlignment: MainAxisAlignment.center,
+//       children: [
+//         Text(
+//           mealText,
+//           style: theme.textTheme.labelLarge!.copyWith(
+//             color: appTheme.black900,
+//           ),
+//         ),
+//         Spacer(),
+//         Text(
+//           weightText,
+//           style: theme.textTheme.labelLarge!.copyWith(
+//             color: appTheme.black900,
+//           ),
+//         ),
+//         Padding(
+//           padding: EdgeInsets.only(left: 30.h,right: 15.h),
+//           child: Text(
+//             nutritionalText,
+//             style: theme.textTheme.labelLarge!.copyWith(
+//               color: appTheme.black900,
+//             ),
+//           ),
+//         )
+//       ],
+//     );
 //   }
-// }
 //
-// class MessageBubble extends StatelessWidget {
-//   final String message;
-//   final bool isUserMessage;
-//
-//   const MessageBubble({
-//     Key? key,
-//     required this.message,
-//     required this.isUserMessage,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Align(
-//       alignment: isUserMessage ? Alignment.centerRight : Alignment.centerLeft,
-//       child: Container(
-//         margin: EdgeInsets.fromLTRB(48.h, 8.v, 48.h, 8.v),
-//         padding: EdgeInsets.all(12.0),
-//         width: 280.h,
-//         decoration: BoxDecoration(
-//           color: isUserMessage ? Colors.red.shade200 : Colors.red.shade50,//ekhane colour change
-//           borderRadius: BorderRadius.circular(12.0),
+//   /// Common widget
+//   Widget _buildRowturkeyburger(
+//       BuildContext context, {
+//         required String menuText1,
+//         required String menuText2,
+//         required String menuText3,
+//       }) {
+//     return Row(
+//       children: [
+//         SizedBox(
+//           width: 75.h,
+//           child: Text(
+//             menuText1,
+//             maxLines: 3,
+//             overflow: TextOverflow.ellipsis,
+//             style: theme.textTheme.bodySmall!.copyWith(
+//               color: appTheme.black900,
+//             ),
+//           ),
 //         ),
-//
-//         child: Text(
-//           message,
-//           style: TextStyle(color: Colors.black),
+//         Spacer(
+//           flex: 62,
 //         ),
-//       ),
+//         SizedBox(
+//           width: 27.h,
+//           child: Text(
+//             menuText2,
+//             maxLines: 3,
+//             overflow: TextOverflow.ellipsis,
+//             style: theme.textTheme.bodySmall!.copyWith(
+//               color: appTheme.black900,
+//             ),
+//           ),
+//         ),
+//         Spacer(
+//           flex: 37,
+//         ),
+//         SizedBox(
+//           width: 64.h,
+//           child: Text(
+//             menuText3,
+//             maxLines: 3,
+//             overflow: TextOverflow.ellipsis,
+//             style: theme.textTheme.bodySmall!.copyWith(
+//               color: appTheme.black900,
+//             ),
+//           ),
+//         )
+//       ],
 //     );
 //   }
 // }

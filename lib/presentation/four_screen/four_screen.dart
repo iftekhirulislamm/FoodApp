@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../core/app_export.dart';
 import '../../widgets/custom_icon_button.dart';
 import '../../widgets/custom_text_form_field.dart';
@@ -170,7 +171,16 @@ class _FourScreenState extends State<FourScreen> {
                 Spacer(
                   flex: 40,
                 ),
-                CustomImageView(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FiveScreen(),
+                  ),
+                );
+              },
+                child: CustomImageView(
                   imagePath: ImageConstant.imgFiBookmark,
                   height: 24.adaptSize,
                   width: 24.adaptSize,
@@ -179,6 +189,7 @@ class _FourScreenState extends State<FourScreen> {
                     bottom: 16.v,
                   ),
                 ),
+            ),
                 Spacer(
                   flex: 59,
                 ),

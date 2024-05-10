@@ -24,6 +24,13 @@ class AppDecoration {
       ],
     ),
   );
+  static BoxDecoration get gradientBlackToPink50 => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(0.5, -0.38),
+      end: Alignment(0.5, 1),
+      colors: [appTheme.black900, appTheme.pink100, appTheme.pink50],
+    ),
+  );
   static BoxDecoration get gradientBlackToPink => BoxDecoration(
     gradient: LinearGradient(
       begin: Alignment(0.5, -0.37),
@@ -50,7 +57,7 @@ class AppDecoration {
     color: appTheme.pink507f,
     boxShadow: [
       BoxShadow(
-        color: appTheme.black900.withOpacity(0.25),
+        color: appTheme.pink507f.withOpacity(0.15),
         spreadRadius: 2.h,
         blurRadius: 2.h,
         offset: Offset(

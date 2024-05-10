@@ -18,6 +18,8 @@ class ImageConstant {
 // 8 Loading Screen images
   static String imgGrid = '$imagePath/img_grid.svg';
 
+  // Seven images
+  static String imgClock = '$imagePath/img_clock.svg';
 // Common images
   static String imgOne = '$imagePath/img_one.png';
 

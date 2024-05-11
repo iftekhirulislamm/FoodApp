@@ -42,7 +42,7 @@ class OneScreen extends StatelessWidget {
                 height: SizeUtils.height,
                 child: Form(
                   key: _formKey,
-                  child: Container(
+                  child: SingleChildScrollView(
                     padding: EdgeInsets.symmetric(
                       horizontal: 59.h,
                       vertical: 88.4.v,

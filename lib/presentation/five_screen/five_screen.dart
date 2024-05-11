@@ -5,6 +5,7 @@ import '../../widgets/custom_icon_button.dart';
 import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
 import '../four_screen/four_screen.dart';
 import '../five_screen/five_screen.dart';
+import '../loading_screen/loading_screen.dart';
 // ignore_for_file: must_be_immutable
 class FiveScreen extends StatelessWidget {
   FiveScreen({Key? key})
@@ -235,12 +236,23 @@ class FiveScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => FourScreen(),
-                      ),
+                    // Show loading screen
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return const LoadingScreen();
+                      },
                     );
+                    Future.delayed(const Duration(milliseconds: 200), () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FourScreen(),
+                        ),
+                      );
+                    });
                   },
                   child: CustomImageView(
                     imagePath: ImageConstant.imgFiMessageSquareBlack900,
@@ -272,12 +284,23 @@ class FiveScreen extends StatelessWidget {
                 ),
       GestureDetector(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => SixScreen(),
-            ),
+          // Show loading screen
+          showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return const LoadingScreen();
+            },
           );
+          Future.delayed(const Duration(milliseconds: 200), () {
+            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SixScreen(),
+              ),
+            );
+          });
         },
                 child:CustomImageView(
                   imagePath: ImageConstant.imgFiGitlab,

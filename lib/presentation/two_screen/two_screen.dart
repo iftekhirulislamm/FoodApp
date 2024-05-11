@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:health_nourish/presentation/one_screen/one_screen.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_outlined_button.dart';
 import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_immutable
 import '../../presentation/three_screen/three_screen.dart';
+import '../loading_screen/loading_screen.dart';
 // ignore_for_file: must_be_immutable
 class TwoScreen extends StatelessWidget {
   TwoScreen({Key? key})
@@ -139,11 +141,22 @@ class TwoScreen extends StatelessWidget {
 
 
                         onPressed: () {
-                          // Navigate to the ThreeScreen
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => ThreeScreen()),
+                          showDialog(
+                            context: context,
+                            barrierDismissible: false,
+                            builder: (BuildContext context) {
+                              return const LoadingScreen();
+                            },
                           );
+                          Future.delayed(const Duration(milliseconds: 200), () {
+                            Navigator.pop(context);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ThreeScreen(),
+                              ),
+                            );
+                          });
                         },
                       ),
                       SizedBox(height: 10.v),
@@ -151,7 +164,22 @@ class TwoScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: GestureDetector(
                           onTap: () {
-                            onTapTxtHaveanaccount(context);
+                            showDialog(
+                              context: context,
+                              barrierDismissible: false,
+                              builder: (BuildContext context) {
+                                return const LoadingScreen();
+                              },
+                            );
+                            Future.delayed(const Duration(milliseconds: 200), () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => OneScreen(),
+                                ),
+                              );
+                            });
                           },
                           child: RichText(
                             text: TextSpan(

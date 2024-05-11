@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_nourish/presentation/loading_screen/loading_screen.dart';
 
 import '../../core/app_export.dart';
 import '../../widgets/custom_icon_button.dart';
@@ -171,36 +172,58 @@ class _FourScreenState extends State<FourScreen> {
                 Spacer(
                   flex: 40,
                 ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => FiveScreen(),
-                  ),
-                );
-              },
-                child: CustomImageView(
-                  imagePath: ImageConstant.imgFiBookmark,
-                  height: 24.adaptSize,
-                  width: 24.adaptSize,
-                  margin: EdgeInsets.only(
-                    top: 17.v,
-                    bottom: 16.v,
+                GestureDetector(
+                  onTap: () {
+                    // Show loading screen
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return const LoadingScreen();
+                      },
+                    );
+                    Future.delayed(const Duration(milliseconds: 200), () {
+                     Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FiveScreen(),
+                        ),
+                      );
+                    });
+                  },
+                  child: CustomImageView(
+                    imagePath: ImageConstant.imgFiBookmark,
+                    height: 24.adaptSize,
+                    width: 24.adaptSize,
+                    margin: EdgeInsets.only(
+                      top: 17.v,
+                      bottom: 16.v,
+                    ),
                   ),
                 ),
-            ),
                 Spacer(
                   flex: 59,
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SixScreen(),
-                      ),
+                    // Show loading screen
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return const LoadingScreen();
+                      },
                     );
+                    Future.delayed(const Duration(milliseconds: 200), () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SixScreen(),
+                        ),
+                      );
+                    });
                   },
                   child: CustomImageView(
                     imagePath: ImageConstant.imgFiGitlab,
@@ -241,7 +264,7 @@ class MessageBubble extends StatelessWidget {
         padding: EdgeInsets.all(12.0),
         width: 280.h,
         decoration: BoxDecoration(
-          color: isUserMessage ? Colors.red.shade200 : Colors.red.shade50,//ekhane colour change
+          color: isUserMessage ? Colors.red.shade200 : Colors.red.shade50,
           borderRadius: BorderRadius.circular(12.0),
         ),
 
@@ -253,3 +276,6 @@ class MessageBubble extends StatelessWidget {
     );
   }
 }
+
+
+

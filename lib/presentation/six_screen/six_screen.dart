@@ -4,12 +4,12 @@ import '../../widgets/custom_icon_button.dart';
 import '../one_screen/one_screen.dart';
 import '../four_screen/four_screen.dart';
 import '../five_screen/five_screen.dart';
+import '../loading_screen/loading_screen.dart';
 class SixScreen extends StatelessWidget {
   const SixScreen({Key? key})
       : super(
           key: key,
         );
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -150,12 +150,23 @@ class SixScreen extends StatelessWidget {
                 SizedBox(height: 70.v),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => OneScreen(),
-                      ),
+                    // Show loading screen
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return const LoadingScreen();
+                      },
                     );
+                    Future.delayed(const Duration(milliseconds: 200), () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => OneScreen(),
+                        ),
+                      );
+                    });
                   },
                   child: Align(
                     alignment: Alignment.centerLeft,
@@ -219,12 +230,23 @@ class SixScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => FourScreen(),
-                      ),
+                    // Show loading screen
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return const LoadingScreen();
+                      },
                     );
+                    Future.delayed(const Duration(milliseconds: 200), () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FourScreen(),
+                        ),
+                      );
+                    });
                   },
                   child: CustomImageView(
                     imagePath: ImageConstant.imgFiMessageSquareBlack900,
@@ -243,12 +265,23 @@ class SixScreen extends StatelessWidget {
                 ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => FiveScreen(),
-                        ),
+                      // Show loading screen
+                      showDialog(
+                        context: context,
+                        barrierDismissible: false,
+                        builder: (BuildContext context) {
+                          return const LoadingScreen();
+                        },
                       );
+                      Future.delayed(const Duration(milliseconds: 200), () {
+                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FiveScreen(),
+                          ),
+                        );
+                      });
                     },
                 child: CustomImageView(
                   imagePath: ImageConstant.imgFiBookmark,

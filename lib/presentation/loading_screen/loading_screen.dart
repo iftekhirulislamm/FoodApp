@@ -9,31 +9,12 @@ class LoadingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        extendBody: true,
-        extendBodyBehindAppBar: true,
-        body: Container(
-          width: SizeUtils.width,
-          height: SizeUtils.height,
-          decoration: BoxDecoration(
-            color: appTheme.pink5001,
-            image: DecorationImage(
-              image: AssetImage(
-                ImageConstant.imgOne,
-              ),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: SizedBox(
-            child: CustomImageView(
-              imagePath: ImageConstant.imgGrid,
-              height: 10.v,
-              width: 62.h,
-              alignment: Alignment.center,
-            ),
-          ),
-        ),
+
+    return const Center(
+      child: CircularProgressIndicator(
+        color:Color(0xFFF06292),
+        backgroundColor: Colors.white60,
+
       ),
     );
   }

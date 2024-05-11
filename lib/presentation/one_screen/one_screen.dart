@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:health_nourish/presentation/two_screen/two_screen.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_outlined_button.dart';
 import '../../widgets/custom_text_form_field.dart';
 import '../six_screen/six_screen.dart';
+import '../loading_screen/loading_screen.dart';
 class OneScreen extends StatelessWidget {
   OneScreen({Key? key}) : super(key: key);
 
@@ -32,7 +34,7 @@ class OneScreen extends StatelessWidget {
             ),
           ),
           child: Center(
-            child: SingleChildScrollView(
+            child: Container(
               padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).viewInsets.bottom,
               ),
@@ -43,7 +45,7 @@ class OneScreen extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.symmetric(
                       horizontal: 59.h,
-                      vertical: 89.v,
+                      vertical: 88.4.v,
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -97,13 +99,44 @@ class OneScreen extends StatelessWidget {
                           text: "Sign In",
                           buttonStyle: CustomButtonStyles.outlineBlueGray,
                           onPressed: () {
-                            Navigator.pushNamed(context, AppRoutes.sixScreen);
+                            showDialog(
+                              context: context,
+                              barrierDismissible: false,
+                              builder: (BuildContext context) {
+                                return const LoadingScreen();
+                              },
+                            );
+                            Future.delayed(const Duration(milliseconds: 200), () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SixScreen(),
+                                ),
+                              );
+                            });
                           },
                         ),
                         SizedBox(height: 11.v),
                         GestureDetector(
                           onTap: () {
-                            onTapTxtDonthaveanaccountsign(context);
+                            // Show loading screen
+                            showDialog(
+                              context: context,
+                              barrierDismissible: false,
+                              builder: (BuildContext context) {
+                                return const LoadingScreen();
+                              },
+                            );
+                            Future.delayed(const Duration(milliseconds: 200), () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => TwoScreen(),
+                                ),
+                              );
+                            });
                           },
                           child: RichText(
                             text: TextSpan(
@@ -216,9 +249,5 @@ class OneScreen extends StatelessWidget {
       ),
 
     );
-  }
-
-  onTapTxtDonthaveanaccountsign(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.twoScreen);
   }
 }

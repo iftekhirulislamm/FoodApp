@@ -7,6 +7,7 @@ import '../../widgets/custom_text_form_field.dart'; // ignore_for_file: must_be_
 import '../../presentation/three_screen/three_screen.dart';
 import '../loading_screen/loading_screen.dart';
 // ignore_for_file: must_be_immutable
+
 class TwoScreen extends StatelessWidget {
   TwoScreen({Key? key})
       : super(
@@ -83,7 +84,8 @@ class TwoScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.center,
                         child: SizedBox(
-                          width: 191.h,
+                          width: 220.h,
+                          height:50.v,
                           child: Text(
                             "Create a new account\n ",
                             maxLines: null,

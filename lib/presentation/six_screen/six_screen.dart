@@ -110,7 +110,7 @@ class SixScreen extends StatelessWidget {
                                 style: theme.textTheme.titleSmall,
                               ),
                               Padding(
-                                padding: EdgeInsets.only(left: 13.h),
+                                padding: EdgeInsets.only(left: 6.h),
                                 child: Text(
                                   ": +8801xxxxxxxxxxx",
                                   style: theme.textTheme.titleSmall,
@@ -193,7 +193,7 @@ class SixScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 95.7.v),
+                SizedBox(height: 75.7.v),
                 _buildColumnfimessage(context)
               ],
             ),

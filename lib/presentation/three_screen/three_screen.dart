@@ -57,8 +57,8 @@ class ThreeScreen extends StatelessWidget {
                     children: [
 
                       SizedBox(
-                        width: 146.h,
-                        height: 15.v,
+                        width: 170.h,
+                        height: 20.v,
                         child: Text(
                           "USER REGISTERED\n ",
                           maxLines: null,
@@ -71,7 +71,8 @@ class ThreeScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 45.v),
                       SizedBox(
-                        width: 191.h,
+                        width: 230.h,
+                        height:50.v,
                         child: Text(
                           "Create a new account\n ",
                           maxLines: null,

@@ -79,7 +79,8 @@ class OneScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 49.v),
                         SizedBox(
-                          width: 197.h,
+                          width: 220.h,
+                          height: 50.v,
                           child: Text(
                             "Sign in to your account\n ",
                             maxLines: null,
